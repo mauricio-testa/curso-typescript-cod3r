@@ -1,5 +1,6 @@
 "use strict";
-const a = 'Teste TS Webzão';
+console.log("********* SEÇÃO 1 **********");
+const a = 'Teste TS';
 console.log(a);
 // tsc hello.ts
 // node hello.js
