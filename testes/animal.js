@@ -1,23 +1,22 @@
 "use strict";
+// quando uma classe herda uma interface, usa implements
 class Baleias {
     constructor() {
-        this.tipo = 'Aves';
-        this.habitat = 'Ar';
+        this.nome = '';
+        this.tipo = 'Peixe';
+        this.habitat = 'Mar';
+    }
+    identificar() {
+        return this.nome + ' é um ' + this.tipo + ' e vive no ' + this.habitat;
     }
     nascer() {
-        console.log('nascendo...');
+        console.log(this.identificar() + ' | Está nascendo...');
     }
     nadar() {
-        console.log('nadando....');
+        console.log(this.identificar() + ' | Está nadando...');
     }
 }
-class Orca extends Baleias {
-    constructor() {
-        super(...arguments);
-        this.nome = 'Orca';
-    }
-}
-const baleia1 = new Orca();
+const baleia1 = new Baleias();
 baleia1.nome = 'Chico';
 baleia1.nascer();
 baleia1.nadar();
